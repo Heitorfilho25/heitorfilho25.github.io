@@ -46,15 +46,15 @@
     }
 
     .avatar{
-  width:160px;                 /* pode trocar para 140 ou 132 se preferir menor */
+  width:160px;
   height:160px;
   border-radius:50%;
   margin:-90px auto 12px;
   border:3px solid var(--ring);
   display:block;
-  object-fit:contain;          /* mostra a imagem inteira */
-  object-position:center;      /* centraliza */
-  background:#0b1220;          /* cor de fundo para eventuais bordas */
+  object-fit:cover;            /* preenche o círculo */
+  object-position:50% 25%;     /* sobe o enquadramento (25% a 30% costuma ficar bom) */
+  background:#0b1220;
 }
 
     .tag {
