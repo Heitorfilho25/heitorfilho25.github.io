@@ -4,173 +4,149 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Heitor Reis Leite Filho - Corretor de Imóveis</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
-    :root {
-      --text: #f0f3fa;
-      --muted: #b0bbd1;
-      --button: #1b2a47;
-      --accent: #00bfa6;
-      --ring: #1e90ff;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
     }
 
     body {
-      margin: 0;
-      font-family: "Poppins", sans-serif;
-      color: var(--text);
-      background: linear-gradient(270deg, #0b1220, #16243d, #1b283a);
-      background-size: 600% 600%;
+      background: linear-gradient(-45deg, #0d1b2a, #1b263b, #243b55, #141e30);
+      background-size: 400% 400%;
       animation: gradient 10s ease infinite;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
+      color: #fff;
+      padding: 20px;
     }
 
     @keyframes gradient {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
     }
 
-    .card {
-      background: rgba(27, 35, 51, 0.9);
-      padding: 30px;
-      border-radius: 18px;
-      width: 90%;
-      max-width: 480px;
-      text-align: center;
-      box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(10px);
-    }
-
-    .avatar{
-  width:160px;
-  height:160px;
-  border-radius:50%;
-  margin:-90px auto 12px;
-  border:3px solid var(--ring);
-  display:block;
-  object-fit:cover;            /* preenche o círculo */
-  object-position:50% 25%;     /* sobe o enquadramento (25% a 30% costuma ficar bom) */
-  background:#0b1220;
-}
-
-    .tag {
-      background: var(--accent);
-      color: #fff;
-      padding: 5px 14px;
+    .container {
+      background: rgba(10, 20, 40, 0.9);
       border-radius: 20px;
-      display: inline-block;
-      font-size: 0.8em;
-      margin-top: 6px;
+      padding: 30px;
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+    }
+
+    .perfil-img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: contain;
+      border: 4px solid #00aaff;
+      background-color: #fff;
+      padding: 4px;
+      margin-bottom: 15px;
     }
 
     h1 {
-      margin: 8px 0 0;
-      font-size: 1.6em;
-    }
-
-    p {
-      color: var(--muted);
-      margin: 8px 0 20px;
-    }
-
-    .button {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: var(--button);
-      color: var(--text);
-      padding: 14px 18px;
-      border-radius: 12px;
-      margin: 12px 0;
-      text-decoration: none;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
-    }
-
-    .button:hover {
-      background: var(--ring);
-      transform: scale(1.04);
+      font-size: 22px;
+      margin-bottom: 10px;
       color: #fff;
     }
 
-    .button img {
-      width: 28px;
-      height: 28px;
-      margin-right: 12px;
-      border-radius: 6px;
+    .creci {
+      display: inline-block;
+      background: #00b894;
+      color: #fff;
+      padding: 5px 15px;
+      border-radius: 25px;
+      font-size: 13px;
+      margin-bottom: 10px;
     }
 
-    .btn-left {
+    p {
+      font-size: 14px;
+      color: #dcdde1;
+      margin-bottom: 20px;
+    }
+
+    .btn {
       display: flex;
       align-items: center;
-      gap: 10px;
+      justify-content: space-between;
+      background: #1b263b;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 12px;
+      margin: 10px 0;
+      font-size: 15px;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.04);
+      background: #00aaff;
+    }
+
+    .btn img {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
     }
 
     footer {
-      font-size: 0.8em;
-      color: var(--muted);
-      margin-top: 20px;
+      font-size: 13px;
+      color: #ccc;
+      margin-top: 25px;
     }
 
-    @media (max-width: 480px) {
-      h1 { font-size: 1.4em; }
-      .avatar { width: 120px; height: 120px; }
-    }
+    .btn-whatsapp { background: #128C7E; }
+    .btn-instagram { background: #C13584; }
+    .btn-email { background: #444; }
+    .btn-visita { background: #009432; }
+    .btn-ptam { background: #0652DD; }
   </style>
 </head>
 <body>
-  <div class="card">
-    <img class="avatar" src="perfil.jpg" alt="Foto de Heitor Filho">
-    <div class="tag">CRECI MA 8396</div>
+  <div class="container">
+    <img src="perfil.jpg" alt="Heitor Reis Leite Filho" class="perfil-img">
+    <div class="creci">CRECI MA 8396</div>
     <h1>Heitor Reis Leite Filho</h1>
     <p>Corretor de Imóveis • Atuação: <strong>São Luís – TURU – ARAÇAGY</strong></p>
 
-    <a class="button" href="https://wa.me/5598981744847?text=Olá%20Heitor!%20Gostaria%20de%20mais%20informações%20sobre%20imóveis." target="_blank">
-      <div class="btn-left">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
-        WhatsApp
-      </div>
+    <a href="https://wa.me/5598981744847?text=Olá%20Heitor,%20gostaria%20de%20mais%20informações." target="_blank" class="btn btn-whatsapp">
+      <span>📱 WhatsApp</span>
       <span>Mensagem direta</span>
     </a>
 
-    <a class="button" href="https://www.instagram.com/heitor_filhomulti" target="_blank">
-      <div class="btn-left">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
-        Instagram
-      </div>
+    <a href="https://www.instagram.com/heitor_filhomulti" target="_blank" class="btn btn-instagram">
+      <span>📸 Instagram</span>
       <span>@heitor_filhomulti</span>
     </a>
 
-    <a class="button" href="mailto:heitorfilhotim@hotmail.com">
-      <div class="btn-left">
-        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
-        E-mail
-      </div>
+    <a href="mailto:heitorfilhotim@hotmail.com" class="btn btn-email">
+      <span>📧 E-mail</span>
       <span>heitorfilhotim@hotmail.com</span>
     </a>
 
-    <a class="button" href="https://wa.me/5598981744847?text=Olá%20Heitor!%20Gostaria%20de%20agendar%20uma%20visita%20para%20ver%20um%20imóvel." target="_blank" style="background:#006c3c;">
-      <div class="btn-left">
-        <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Calendário">
-        Agendar Visita
-      </div>
-      <span>✔️ Clique aqui</span>
+    <a href="https://wa.me/5598981744847?text=Olá%20Heitor,%20gostaria%20de%20agendar%20uma%20visita." target="_blank" class="btn btn-visita">
+      <span>📍 Agendar Visita</span>
+      <span>✅ Clique aqui</span>
     </a>
 
-    <a class="button" href="https://wa.me/5598981744847?text=Olá%20Heitor!%20Gostaria%20de%20solicitar%20uma%20avaliação%20gratuita%20(PTAM)%20do%20meu%20imóvel." target="_blank" style="background:#0085ff;">
-      <div class="btn-left">
-        <img src="https://cdn-icons-png.flaticon.com/512/2230/2230675.png" alt="PTAM">
-        Avaliação Gratuita (PTAM)
-      </div>
-      <span>📋 Solicitar</span>
+    <a href="https://wa.me/5598981744847?text=Olá%20Heitor,%20desejo%20uma%20Avaliação%20Gratuita%20(PTAM)%20do%20meu%20imóvel." target="_blank" class="btn btn-ptam">
+      <span>💰 Avaliação Gratuita (PTAM)</span>
+      <span>📩 Solicitar</span>
     </a>
 
-    <footer>© 2025 Heitor Filho · São Luís/MA</footer>
+    <footer>
+      © 2025 Heitor Filho • São Luís/MA
+    </footer>
   </div>
 </body>
 </html>
