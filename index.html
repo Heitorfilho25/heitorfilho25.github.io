@@ -1,163 +1,121 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Heitor Filho | Corretor de Imóveis</title>
-  <meta name="description" content="Heitor Reis Leite Filho — Corretor de Imóveis (CRECI MA 8396). Atuação: São Luís – TURU – ARAÇAGY. WhatsApp, Instagram e E-mail.">
-  <meta name="theme-color" content="#10b981">
-
-  <!-- Social preview -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Heitor Filho | Corretor de Imóveis">
-  <meta property="og:description" content="CRECI MA 8396 • São Luís – TURU – ARAÇAGY • Contato rápido">
-  <meta property="og:image" content="perfil.jpg">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heitor Reis Leite Filho - Corretor de Imóveis</title>
   <style>
-    :root{
-      --bg: #0b1220;
-      --panel: #0f172a;
-      --text: #e5e7eb;
-      --muted: #94a3b8;
-      --brand:#10b981; /* verde elegante */
-      --ring: rgba(16,185,129,.35);
-      --border: rgba(148,163,184,.18);
-      --glow: radial-gradient(900px 500px at 10% -10%, rgba(16,185,129,.12), transparent 60%),
-              radial-gradient(700px 400px at 110% 10%, rgba(56,189,248,.12), transparent 60%);
+    :root {
+      --bg:#0b1220;
+      --card:#1b2333;
+      --ring:#1e90ff;
+      --text:#f0f3fa;
+      --muted:#9ba8c7;
+      --button:#22324a;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial;
-      color:var(--text);
-      background:
-        linear-gradient(180deg, rgba(2,6,23,.3), rgba(2,6,23,.9)),
-        var(--glow),
-        #050a16;
-      display:grid;
-      place-items:center;
-      padding:32px 16px 48px;
-    }
-    .wrap{width:100%;max-width:820px}
-    .hero{
-      position:relative;
-      background:
-        linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0)) border-box,
-        var(--panel);
-      border:1px solid var(--border);
-      border-radius:22px;
-      padding:28px;
-      box-shadow: 0 24px 60px rgba(2,6,23,.55);
-      overflow:hidden;
-    }
-    .avatar{
-  width:120px;
-  height:120px;
-  border-radius:50%;
-  margin:-86px auto 12px;
-  border:3px solid var(--ring);
-  background:#0b1220 url('perfil.jpg') center/contain no-repeat;
-  background-size:contain;
-  background-color:#0b1220;
-}
-    .badge{
-      display:inline-grid;place-items:center;
-      padding:6px 12px;border-radius:999px;
-      background:rgba(16,185,129,.12);
-      border:1px solid var(--ring);
-      color:#d1fae5;font-size:12px;letter-spacing:.2px
-    }
-    h1{margin:6px 0 8px;text-align:center;font-size:clamp(22px,4vw,30px)}
-    .sub{margin:0;text-align:center;color:var(--muted)}
-    .tags{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:14px 0 6px}
-    .tag{font-size:12px;color:#dbeafe;background:rgba(56,189,248,.12);border:1px solid rgba(56,189,248,.35);padding:6px 10px;border-radius:999px}
 
-    .buttons{display:grid;gap:12px;margin-top:18px}
-    .btn{
-      display:grid;grid-template-columns:34px 1fr 18px;align-items:center;gap:12px;
-      text-decoration:none;color:var(--text);
-      padding:14px 16px;border-radius:16px;
-      border:1px solid var(--border);
-      background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0));
-      transition:transform .08s ease, border-color .12s ease, background .12s ease, box-shadow .12s ease;
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Poppins", sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
     }
-    .btn:hover{transform:translateY(-1px);border-color:var(--ring);box-shadow:0 6px 20px rgba(2,6,23,.55)}
-    .ico{
-      width:34px;height:34px;border-radius:12px;display:grid;place-items:center;
-      border:1px solid var(--ring);background:rgba(16,185,129,.13);font-size:18px
-    }
-    .btn.wa .ico{background:rgba(16,185,129,.18)}
-    .btn.ig .ico{background:rgba(56,189,248,.16)}
-    .btn.mail .ico{background:rgba(234,179,8,.16)}
-    .btn small{color:var(--muted);display:block;font-size:12px;line-height:1.2}
-    .btn strong{letter-spacing:.2px}
 
-    .grid{
-      display:grid;gap:16px;margin-top:16px;
-      grid-template-columns: repeat(2, minmax(0,1fr));
+    .card {
+      background: var(--card);
+      padding: 30px;
+      border-radius: 18px;
+      width: 90%;
+      max-width: 480px;
+      text-align: center;
+      box-shadow: 0 0 25px rgba(0,0,0,0.3);
     }
-    @media (max-width:640px){ .grid{grid-template-columns:1fr} }
 
-    .foot{color:var(--muted);text-align:center;margin-top:18px;font-size:12px}
-    .float-wa{
-      position:fixed;right:18px;bottom:18px;z-index:20;
-      width:56px;height:56px;border-radius:16px;
-      display:grid;place-items:center;text-decoration:none;color:white;
-      background:linear-gradient(135deg,#22c55e,#16a34a);
-      box-shadow:0 14px 30px rgba(22,163,74,.45);
-      border:1px solid rgba(255,255,255,.12);
-      font-size:24px;
+    .avatar {
+      width: 132px;
+      height: 132px;
+      border-radius: 50%;
+      border: 3px solid var(--ring);
+      margin: -90px auto 12px;
+      display: block;
+      object-fit: cover;
+      object-position: center;
+      background: var(--bg);
+    }
+
+    h1 {
+      margin: 8px 0 0;
+      font-size: 1.6em;
+    }
+
+    .tag {
+      background: var(--ring);
+      color: white;
+      padding: 5px 14px;
+      border-radius: 20px;
+      display: inline-block;
+      font-size: 0.8em;
+      margin-top: 6px;
+    }
+
+    p {
+      margin: 6px 0;
+      color: var(--muted);
+    }
+
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--button);
+      color: var(--text);
+      padding: 14px 18px;
+      border-radius: 12px;
+      margin: 12px 0;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      background: var(--ring);
+      color: white;
+      transform: scale(1.03);
+    }
+
+    footer {
+      font-size: 0.8em;
+      color: var(--muted);
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
-  <main class="wrap">
-    <section class="hero">
-      <div class="avatar" aria-label="Foto de Heitor Filho"></div>
+  <div class="card">
+    <img class="avatar" src="perfil.jpg" alt="Foto de Heitor Filho">
+    <div class="tag">CRECI MA 8396</div>
+    <h1>Heitor Reis Leite Filho</h1>
+    <p>Corretor de Imóveis • Atuação: <strong>São Luís – TURU – ARAÇAGY</strong></p>
 
-      <p style="text-align:center;margin:0;"><span class="badge">CRECI MA 8396</span></p>
-      <h1>Heitor Reis Leite Filho</h1>
-      <p class="sub">Corretor de Imóveis · Atuação: <strong>São Luís – TURU – ARAÇAGY</strong></p>
+    <a class="button" href="https://wa.me/5598981744847" target="_blank">
+      💬 WhatsApp <span>Mensagem direta</span>
+    </a>
 
-      <div class="tags">
-        <span class="tag">Residencial & Comercial</span>
-        <span class="tag">Atendimento rápido</span>
-      </div>
+    <a class="button" href="https://www.instagram.com/heitor_filhomulti" target="_blank">
+      📸 Instagram <span>@heitor_filhomulti</span>
+    </a>
 
-      <!-- Botões principais -->
-      <div class="buttons">
-        <a class="btn wa" href="https://wa.me/559884242857?text=Ol%C3%A1%20Heitor%2C%20vim%20pelo%20Instagram%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20im%C3%B3veis." target="_blank" rel="noopener">
-          <span class="ico">💬</span>
-          <span><strong>WhatsApp</strong><small>Mensagem direta</small></span>
-          <span>↗</span>
-        </a>
+    <a class="button" href="mailto:heitorfilhotim@hotmail.com">
+      ✉️ E-mail <span>heitorfilhotim@hotmail.com</span>
+    </a>
 
-        <div class="grid">
-          <a class="btn ig" href="https://instagram.com/heitor_filhomulti" target="_blank" rel="noopener">
-            <span class="ico">📷</span>
-            <span><strong>Instagram</strong><small>@heitor_filhomulti</small></span>
-            <span>↗</span>
-          </a>
-
-          <a class="btn mail" href="mailto:heitorfilhotim@hotmail.com?subject=Contato%20via%20site&body=Ol%C3%A1%20Heitor%2C%20tudo%20bem%3F" target="_blank" rel="noopener">
-            <span class="ico">✉️</span>
-            <span><strong>E-mail</strong><small>heitorfilhotim@hotmail.com</small></span>
-            <span>↗</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <p class="foot">© <span id="y"></span> Heitor Filho · São Luís/MA</p>
-  </main>
-
-  <!-- Botão flutuante de WhatsApp -->
-  <a class="float-wa" href="https://wa.me/559884242857?text=Ol%C3%A1%20Heitor%2C%20vim%20pelo%20site." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">🟢</a>
-
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+    <footer>© 2025 Heitor Filho · São Luís/MA</footer>
+  </div>
 </body>
 </html>
+
 
